@@ -27,7 +27,7 @@ Installation:
 Requires a fresh Ubuntu 16.04 or Ubuntu 18.04 installation.
 
 ```
-curl https://raw.githubusercontent.com/mivanoski/Pool4U_Yiimp_Installer/spex/bootstrap.sh | bash
+curl https://raw.githubusercontent.com/mivanoski/Pool4U_Yiimp_Installer/master/bootstrap.sh | bash
 ```
 
 
