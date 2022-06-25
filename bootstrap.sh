@@ -18,7 +18,7 @@
 #echo
 
 echo Downloading Yiimp Server Installer v1.0. . .
-git clone -b spex https://github.com/spaceexpanse/Pool4U_Yiimp_Setup "$HOME"/yiimpserver/install < /dev/null 2> /dev/null
+git clone -b spex https://github.com/spaceexpanse/Yiimp_Setup "$HOME"/yiimpserver/install < /dev/null 2> /dev/null
 echo
 
 # Start setup script.
