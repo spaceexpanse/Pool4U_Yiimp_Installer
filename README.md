@@ -4,7 +4,7 @@
 
 All in one installer for your yiimp server.
 
-**YiiMP Server Installer! ** Automates most of the tedious tasks of the following releases:
+**YiiMP Server Installer!** Automates most of the tedious tasks of the following releases:
 
 * YiiMP
 
