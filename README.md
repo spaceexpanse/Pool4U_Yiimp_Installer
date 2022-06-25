@@ -13,9 +13,9 @@ All in one installer for your yiimp server.
 
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [YiiMP Single Server Install](#-yiimp-single-server-install)
+- [YiiMP Single Server Install](#yiimp-single-server-install)
 - [Commands](#-commands)
-- [YiiMP Multi-Server Install](#-yiimp-multi-server-install)
+- [YiiMP Multi-Server Install](#yiimp-multi-server-install)
 - [Credits](#-credits)
 - [License](#-license)
 
