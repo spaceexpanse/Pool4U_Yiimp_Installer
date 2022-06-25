@@ -1,10 +1,10 @@
-## Pool4U`s YiiMP Server Installer !
+## YiiMP Server Installer !
 
 ## This is opened as a public repo - all features are not final!
 
 All in one installer for your yiimp server.
 
-**Pool4U YiiMP Server Installer! ** Automates most of the tedious tasks of the following releases:
+**YiiMP Server Installer! ** Automates most of the tedious tasks of the following releases:
 
 * YiiMP
 
@@ -27,7 +27,7 @@ Installation:
 Requires a fresh Ubuntu 16.04 or Ubuntu 18.04 installation.
 
 ```
-curl https://raw.githubusercontent.com/spaceexpanse/Pool4U_Yiimp_Installer/spex/bootstrap.sh | bash
+curl https://raw.githubusercontent.com/spaceexpanse/Yiimp_Installer/spex/bootstrap.sh | bash
 ```
 
 
