@@ -11,23 +11,48 @@ All in one installer for your yiimp server.
 
 ## ▶️ Table Of Contents
 
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [YiiMP Single Server Install](#-yiimp-single-server-install)
-- [Commands](#-commands)
-- [YiiMP Multi-Server Install](#-yiimp-multi-server-install)
-- [Credits](#-credits)
-- [License](#-license)
+- [Pool4U`s YiiMP Server Installer !](#pool4us-yiimp-server-installer-)
+- [This is opened as a public repo - all features are not final!](#this-is-opened-as-a-public-repo---all-features-are-not-final)
+- [▶️ Table Of Contents](#️-table-of-contents)
+- [▶️ Installation](#️-installation)
+- [▶️ Usage](#️-usage)
+- [YiiMP Single Server Install](#yiimp-single-server-install)
+    - [A server reboot is REQUIRED after the installer is completed to finalize the installation process!](#a-server-reboot-is-required-after-the-installer-is-completed-to-finalize-the-installation-process)
+    - [On first reboot it may take up to 10 minutes before the cron screens auto-start. After waiting ten minutes type:](#on-first-reboot-it-may-take-up-to-10-minutes-before-the-cron-screens-auto-start-after-waiting-ten-minutes-type)
+    - [To help make your server more secure we have changed the install locations and directory structure of YiiMP as follows:](#to-help-make-your-server-more-secure-we-have-changed-the-install-locations-and-directory-structure-of-yiimp-as-follows)
+    - [▶️ Commands](#️-commands)
+- [▶️ YiiMP Multi-Server Install](#️-yiimp-multi-server-install)
+    - [If installing wireguard do not modify the default private IP's that are provide. Installation will fail!](#if-installing-wireguard-do-not-modify-the-default-private-ips-that-are-provide-installation-will-fail)
+    - [During the setup process you will be prompted to enter the user name and password for each of your servers. This is required for the installer to be able to SSH in to each server to perform the installation tasks on that server.](#during-the-setup-process-you-will-be-prompted-to-enter-the-user-name-and-password-for-each-of-your-servers-this-is-required-for-the-installer-to-be-able-to-ssh-in-to-each-server-to-perform-the-installation-tasks-on-that-server)
+    - [A server reboot is REQUIRED after the installer is completed to finalize the installation process!](#a-server-reboot-is-required-after-the-installer-is-completed-to-finalize-the-installation-process-1)
+    - [On first reboot it may take up to 1 minute before the cron screens auto-start. After waiting one minute type:](#on-first-reboot-it-may-take-up-to-1-minute-before-the-cron-screens-auto-start-after-waiting-one-minute-type)
+    - [To help make your server more secure we have changed the install locations and directory structure of YiiMP as follows:](#to-help-make-your-server-more-secure-we-have-changed-the-install-locations-and-directory-structure-of-yiimp-as-follows-1)
+    - [🔗 Commands](#-commands)
+- [▶️ Credits](#️-credits)
+- [▶️ License](#️-license)
+- [▶️ Support](#️-support)
 
 
 ## ▶️ Installation
 
 Installation:
 
-Requires a fresh Ubuntu 16.04 or Ubuntu 18.04 installation.
+Requires a fresh Ubuntu 18.04 LTS installation.
 
 ```
 curl https://raw.githubusercontent.com/mivanoski/Pool4U_Yiimp_Installer/master/bootstrap.sh | bash
+```
+
+After the entire installation, it is mandatory to execute the commands
+```
+sudo update-alternatives --config php
+```
+and select the appropriate number for php7.3
+```
+sudo apt install php7.3-memcache -y
+```
+```
+sudo reboot now
 ```
 
 
@@ -124,18 +149,18 @@ The following two tables show you the perfered server setup for the multi-server
 
 Role | OS Version | Recommended Ram
 :--|:--|:-:
-Web Server | Ubuntu 16.04 or Ubuntu 18.04 | 2GB
-DB & Stratum Server | Ubuntu 16.04 or Ubuntu 18.04 | 16GB
-Daemon Server | Ubuntu 16.04 or Ubuntu 18.04 | 8GB+
+Web Server | Ubuntu 18.04 | 2GB
+DB & Stratum Server | Ubuntu 18.04 | 16GB
+Daemon Server | Ubuntu 18.04 | 8GB+
 
  or
 
 Role | OS Version | Recommended Ram
 :--|:--|:-:
-Web Server | Ubuntu 16.04 or Ubuntu 18.04 | 2GB
-DB Server | Ubuntu 16.04 or Ubuntu 18.04 | 2GB
-Stratum Server | Ubuntu 16.04 or Ubuntu 18.04 | 8GB
-Daemon Server | Ubuntu 16.04 or Ubuntu 18.04 | 8GB+
+Web Server | Ubuntu 18.04 | 2GB
+DB Server | Ubuntu 18.04 | 2GB
+Stratum Server | Ubuntu 18.04 | 8GB
+Daemon Server | Ubuntu 18.04 | 8GB+
 
 It is also highly recommended to use a provider that offers private IP's between your servers. If your provider only offers public IP's you must install Wireguard (Installer provided). This will setup a secure VPN connection between your servers for the backend communication.
 
